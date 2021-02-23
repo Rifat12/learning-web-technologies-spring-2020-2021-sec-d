@@ -1,5 +1,19 @@
 <?php
+if(isset($_POST['Submit']))
+{
+  $currentPassword = $_POST['pass'];
+  $newPassword = $_POST['newpass'];
+  $retypeNewPassword = $_POST['nenewpass'];
 
+  if($currentPassword !== $newPassword && $newPassword == $retypeNewPassword)
+  {
+    echo "Password Changed!";
+  }
+      else
+      {
+          echo "Either New and Old Password were same or a mismatch. Try Again";
+      }
+}
 ?>
 
 <!DOCTYPE html>
