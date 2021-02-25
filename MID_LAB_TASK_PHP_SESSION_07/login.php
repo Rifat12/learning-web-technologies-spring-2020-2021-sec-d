@@ -1,91 +1,77 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta>
-    <title>XCompany - Login</title>
-</head>
-<body>
-
-    <table cellspacing="0" border="1" width="820px" align=center>
-
-        <tr>
-
-            <td>
-
-                 <a href="publichome.php"><img src="logo.png" alt="Logo"></a>
-
-            </td>
-
-            <td align="right">
-
-            <pre>    <a href="publichome.php">Home</a>|<a href="login.php">Login</a>|<a href="registration.php">Registration</a>   </pre>
-
-            </td>
-
-        </tr>
-
-        <tr>
-
-            <td colspan="2" height="310px" align="center">
-
-                <form action="login.php" method="post">
-
-                    <fieldset align="left">
-
-                        <legend><b>LOGIN</b></legend>
-
-                        User Name&nbsp;:&nbsp;<input type="text" name="uname"><br><br>
-                        Password&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;<input type="password" name="password">
-                        <hr>
-                        <input type="checkbox" name="remember_me" value="1"> <b>Remember Me</b><br><br>
-                        <input type="submit" name="submit" value="Submit"> <a href="forgotpassword.php">Forgot Password</a>
-
-                    </fieldset>
-
-                </form>
-
-            </td>
-
-        </tr>
-
-        <tr>
-
-            <td colspan="2" align="center">
-                <p>Copyright &#169; Rifat</p>
-            </td>
-
-        </tr>
-
-    </table>
-
-</body>
-</html>
-
-
 <?php
-
-if(isset($_REQUEST['submit']))
-{
-
-    if($_REQUEST['uname']==$_COOKIE['username'] and $_REQUEST['password']==$_COOKIE['password']){
-
-        if(isset($_REQUEST['remember_me'])){
-            setcookie('runame', $_REQUEST['uname'], time()+86400);
-            setcookie('rpassword', $_REQUEST['password'], time()+86400);
-        }
-
-        session_start();
-        $_SESSION['uname'] = $_REQUEST['uname'];
-        $_SESSION['password'] = $_REQUEST['password'];
-        header('location: dashboard.php');
-
-    }
-
-    else
+    session_start();
+    if(isset($_SESSION['flag']))
     {
-        echo "Invalid credentials!";
+        header('location: dashboard.php');
     }
-
-}
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <fieldset>
+        <table width='100%' >
+            <tr>
+            <td>
+                    <img src='logo.png' alt="Image unavailable" height='50px'/>
+                </td>
+                <td align='right'>
+                    <nav>
+                        <a href='./publichome.php'>Home</a> |
+                        <a href='./login.php'>Log In</a> |
+                        <a href='./registration.php'>Registration</a>
+                    </nav>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <fieldset>
+        <legend>
+            LOGIN
+        </legend>
+        <form action='./checklogin.php' method='POST'>
+            <table>
+                <tr>
+                    <td>
+                        User Name:
+                    </td>
+                    <td>
+                        <input type="text" name='logusername'>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Password:
+                    </td>
+                    <td>
+                        <input type="password" name='logpassword'>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <hr>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type='checkbox'>Remember Me
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type='submit' value='Submit'>
+                        <a href='./forgot.php'>Forgot Password?</a>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+</body>
+</html>
