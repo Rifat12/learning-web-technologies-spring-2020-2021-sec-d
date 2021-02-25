@@ -1,69 +1,61 @@
 <?php
-
-session_start();
-$name = $_COOKIE['name'];
+    session_start();
+    if($_SESSION['flag'] != true)
+    {
+        header('location: login.php');
+    }
 
 ?>
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta>
-    <title>XCompany - Login</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASHBOARD</title>
 </head>
 <body>
-    
-    <table cellspacing="0" border="1" width="810px" align=center>
-
+    <fieldset>
+        <table width='100%' >
+            <tr>
+            <td>
+                    <img src='logo.png' alt="Image unavailable" height='50px'/>
+                </td>
+                <td align='right'>
+                    <nav>
+                        <label>Logged in as <a href='./home.php'> <?php echo $_SESSION['username'] ?></a> </label>|
+                        <a href='./logout.php'>Log Out</a>
+                    </nav>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <table border="1px solid black" width='100%'>
         <tr>
-
-             <td width="210px">
-
-                 <a href="dashboard.php"><img src="logo.png" alt="Logo"></a>
-
-            </td>
-
-            <td align="right">
-
-                <pre>Logged in as <a href="profile.php"><?=$name?></a> | <a href="logout.php"> Logout</a>  </pre>
-                
-            </td>
-
-        </tr>
-
-        <tr>
-            
-            <td height="312px" valign="top">
-                <pre><b>  Account</b><hr width=232px></pre>
-                
+            <td>
+                <label>Account</label>
+                <br>
+                <hr>
                 <ul>
-                    
-                    <a href="dashboard.php"><li>Dashboard</li></a>
-                    <a href="profile.php"><li>View Profile</li></a>
-                    <a href="editprofile.php"><li>Edit Profile</li></a>
-                    <a href="profilepicture.php"><li>Change Profile Picture</li></a>
-                    <a href="changepassword.php"><li>Change Password</li></a>
-                    <a href="logout.php"><li>Logout</li></a>
-                    
+                    <li><a href='./dashboard.php'>Dashboard</a></li>
+                    <li><a href='./profile.php'>View Profile</a></li>
+                    <li><a href='./editprofile.php'>Edit Profile</a></li>
+                    <li><a href='./changepic.php'>Change Profile Picture</a></li>
+                    <li><a href='./changepass'>Change Password</a></li>
+                    <li><a href='./logout.php'>Logout</a></li>
                 </ul>
-                              
             </td>
-            
-            <td valign="top" width=80%>
-                <h3><b>Welcome  <u><?=$name?></u></b></h3>
+            <td>
+                <h1>Welcome, <?php echo $_SESSION['username'] ?></h1>
             </td>
-            
         </tr>
-
-        <tr>
-
-            <td colspan="2" align="center">
-                <p>Copyright &#169; 2020</p>
-            </td>
-
-        </tr>
-
     </table>
-    
+    <fieldset>
+        <center>
+            <label>
+                Copyright © 2017
+            </label>
+        </center>
+    </fieldset>
 </body>
 </html>
