@@ -29,11 +29,11 @@
 
                 <td colspan="2" height=180px><h2>Welcome to xCompany</h2></td>
 
-            </tr>
+            </tr>Rifat
 
             <tr>
 
-                <td colspan="2" align="center"><p>Copyright &#169; Rifat</p></td>
+                <td colspan="2" align="center"><p>Copyright &#169; 2017</p></td>
 
             </tr>
 
