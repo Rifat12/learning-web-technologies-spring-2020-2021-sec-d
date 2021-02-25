@@ -19,7 +19,7 @@
         <table width='100%' >
             <tr>
                 <td>
-                    <img src='./images/logo.png' alt="Image unavailable" height='50px'/>
+                    <img src='logo.png' alt="Image unavailable" height='50px'/>
                 </td>
                 <td align='right'>
                     <nav>
