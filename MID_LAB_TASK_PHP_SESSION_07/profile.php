@@ -56,7 +56,7 @@
                                 <?php echo $_SESSION['name']; ?>
                             </td>
                             <td rowspan="8" align="center">
-                                <img src='./images/user.png' alt="not available" height="150px"/>
+                                <img src='user.png' alt="not available" height="150px"/>
                                 <br><a href='#'>Change Picture</a>
                             </td>
                         </tr>
