@@ -1,45 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta>
-    <title>XCompany - Home</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUBLIC HOME</title>
 </head>
-<centre>
 <body>
-
-        <table cellspacing="0" border="1" width="820px" align=center>
-
-            <tr height="51px">
-
-                <td width=210px>
-
-                    <a href="public_home.php"><img src="logo.png" alt="Logo"></a>
-
-                </td>
-
-                <td align="right">
-
-                <pre>    <a href="publichome.php">Home</a>|<a href="login.php">Login</a>|<a href="registration.php">Registration</a>   </pre>
-
-                </td>
-
-            </tr>
-
+    <fieldset>
+        <table width='100%' >
             <tr>
-
-                <td colspan="2" height=180px><h2>Welcome to xCompany</h2></td>
-
-            </tr>Rifat
-
-            <tr>
-
-                <td colspan="2" align="center"><p>Copyright &#169; 2017</p></td>
-
+            <td>
+                    <img src='./images/logo.png' alt="Image unavailable" height='50px'/>
+                </td>
+                <td align='right'>
+                    <nav>
+                        <a href='./publichome.php'>Home</a> |
+                        <a href='./login.php'>Log In</a> |
+                        <a href='./registration.php'>Registration</a>
+                    </nav>
+                </td>
             </tr>
-
         </table>
-
-
-
+    </fieldset>
+    <fieldset>
+        <br> <br><br>
+        <label>
+            <h2>
+                Welcome to xCompany
+            </h2>
+        </label>
+        <br><br><br><br>
+    </fieldset>
+    <fieldset>
+        <center>
+            <label>
+                Copyright © 2017
+            </label>
+        </center>
+    </fieldset>
 </body>
 </html>
