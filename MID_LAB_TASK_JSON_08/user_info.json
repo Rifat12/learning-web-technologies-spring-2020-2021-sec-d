@@ -1,0 +1,35 @@
+[
+    {
+        "name": "David Coleman",
+        "email": "daman@gmail.com",
+        "username": "dave",
+        "password": "dim",
+        "conPass": "dim",
+        "gender": "male",
+        "day": "4",
+        "month": "11",
+        "year": "1972"
+    },
+    {
+        "name": "Alice Coleman",
+        "email": "ac@gmail.com",
+        "username": "aly",
+        "password": "egg",
+        "conPass": "egg",
+        "gender": "female",
+        "day": "3",
+        "month": "11",
+        "year": "1979"
+    },
+    {
+        "name": "Salman Kaif",
+        "email": "sk@gmail.com",
+        "username": "Kat",
+        "password": "rina",
+        "conPass": "rina",
+        "gender": "Male",
+        "day": "4",
+        "month": "12",
+        "year": "1964"
+    }
+]
